@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1761842165 source:c:\users\usuario\desktop\atividade_pilha\atividade_pilha\main.c
+1761843502 source:c:\users\usuario\desktop\atividade_pilha\atividade_pilha\main.c
 	<stdio.h>
 	"pilha.h"
 
-1761842141 c:\users\usuario\desktop\atividade_pilha\atividade_pilha\pilha.h
+1761842644 c:\users\usuario\desktop\atividade_pilha\atividade_pilha\pilha.h
 	<stdbool.h>
+	<string.h>
 
-1761842137 source:c:\users\usuario\desktop\atividade_pilha\atividade_pilha\pilha.c
+1761843091 source:c:\users\usuario\desktop\atividade_pilha\atividade_pilha\pilha.c
 	"pilha.h"
 
