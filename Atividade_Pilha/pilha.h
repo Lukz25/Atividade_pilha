@@ -6,7 +6,7 @@
 
 #define STACK_MAX 10
 
-typedef char stack_info;
+typedef int stack_info;
 
 typedef struct {
     stack_info itens[STACK_MAX];
@@ -34,5 +34,9 @@ void stack_init(pilha *p);
 
 /// Inverte uma string
 bool string_invert(pilha *p, char palavra[]);
+
+
+/// Retorna o número de elementos da pilha que possuem valor ímpar e faça uma nova pilha com todos os valores pares.
+int stack_odd(pilha *pares, pilha p);
 
 #endif // PILHA_H_

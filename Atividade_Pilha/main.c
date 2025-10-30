@@ -4,20 +4,23 @@
 
 int main(){
 
-    char palavra[10];
-    int i;
-
-    pilha p;
+    int i, impares;
+    pilha p, pares;
 
     stack_init(&p);
+    stack_init(&pares);
 
-    scanf("%s", palavra);
 
-    string_invert(&p, palavra);
+    for(i=1; i<11; i++)
+        push(&p,i);
 
-    for(i=0; i<p.topo; i++)
-        printf("%c", p.itens[i]);
 
+    impares = stack_odd(&pares, p);
+
+    printf("%d impares\n", impares);
+
+    for(i=0; i<pares.topo; i++)
+        printf("%d ", pares.itens[i]);
 
 
     return 0;

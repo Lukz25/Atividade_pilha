@@ -52,3 +52,24 @@ bool string_invert(pilha *p, char palavra[]){
     return true;
 }
 
+/// Retorna o número de elementos da pilha que possuem valor ímpar e faça uma nova pilha com todos os valores pares.
+int stack_odd(pilha *pares, pilha p){
+
+    int i, impares=0;
+
+    for(i=0; i<p.topo; i++){
+
+        if(p.itens[i]%2 == 1)
+            impares++;
+
+        else
+            push(pares, p.itens[i]);
+
+
+    }
+
+    return impares;
+
+
+}
+
