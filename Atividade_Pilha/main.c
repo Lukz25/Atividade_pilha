@@ -4,11 +4,7 @@
 
 int main(){
 
-    if(delimiter_verify("({[]})"))
-        printf("Fechou");
-
-    else
-        printf("Nao fechou");
+    stack_read_int();
 
 
     return 0;

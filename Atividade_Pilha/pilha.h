@@ -42,4 +42,7 @@ int stack_odd(pilha *pares, pilha p);
 
 ///  Verifica se uma expressão possui parênteses, colchetes e chaves balanceados
 bool delimiter_verify(char expressao[]);
+
+///Leia números inteiros do usuário até que a pilha esteja cheia.Interrompa a entrada quando a pilha estiver cheia e exiba uma mensagem.
+void stack_read_int();
 #endif // PILHA_H_

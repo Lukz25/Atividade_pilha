@@ -65,7 +65,6 @@ int stack_odd(pilha *pares, pilha p){
         else
             push(pares, p.itens[i]);
 
-
     }
 
     return impares;
@@ -121,11 +120,38 @@ bool delimiter_verify(char expressao[]){
 
         }
 
-
-
     }
 
     return stack_isempty(&abertura);
+
+}
+
+///Leia números inteiros do usuário até que a pilha esteja cheia.Interrompa a entrada quando a pilha estiver cheia e exiba uma mensagem.
+void stack_read_int(){
+
+    pilha p;
+    stack_init(&p);
+    int numero;
+
+    while (!stack_isfull(&p)) {
+        if (scanf("%d", &numero) != 1) {
+            while (getchar() != '\n');
+            continue;
+        }
+        if (!push(&p, numero)) {
+            break;
+        }
+    }
+    if (stack_isfull(&p)) {
+        printf("A pilha esta cheia!\n");
+    }
+    while (!stack_isempty(&p)) {
+        stack_info elemento;
+        if (pop(&p, &elemento)) {
+            printf("%d ", elemento);
+        }
+    }
+    printf("\n");
 
 }
 
