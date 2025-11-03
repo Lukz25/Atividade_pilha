@@ -155,3 +155,15 @@ void stack_read_int(){
 
 }
 
+///Testa se uma pilha P1 tem mais elementos que uma pilha P2.
+bool pilhaMaior(pilha p1, pilha p2){
+    return p1.topo > p2.topo;
+}
+
+
+
+
+
+
+
+

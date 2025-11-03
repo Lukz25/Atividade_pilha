@@ -45,4 +45,8 @@ bool delimiter_verify(char expressao[]);
 
 ///Leia números inteiros do usuário até que a pilha esteja cheia.Interrompa a entrada quando a pilha estiver cheia e exiba uma mensagem.
 void stack_read_int();
+
+///Testa se uma pilha P1 tem mais elementos que uma pilha P2.
+bool pilhaMaior(pilha p1, pilha p2);
+
 #endif // PILHA_H_
