@@ -49,4 +49,7 @@ void stack_read_int();
 ///Testa se uma pilha P1 tem mais elementos que uma pilha P2.
 bool pilhaMaior(pilha p1, pilha p2);
 
+///Desempilha todos os elementos de uma pilha. Exibe os elementos desempilhados.
+void full_Pop(pilha *p);
+
 #endif // PILHA_H_

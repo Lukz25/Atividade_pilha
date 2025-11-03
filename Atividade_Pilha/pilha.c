@@ -160,6 +160,19 @@ bool pilhaMaior(pilha p1, pilha p2){
     return p1.topo > p2.topo;
 }
 
+///Desempilha todos os elementos de uma pilha. Exibe os elementos desempilhados.
+void full_Pop(pilha *p){
+
+    while(!stack_isempty(p)){
+
+        stack_info item;
+
+        pop(p,&item);
+
+        printf("%c\n", item);
+
+    }
+}
 
 
 
