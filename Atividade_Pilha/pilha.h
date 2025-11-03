@@ -52,4 +52,7 @@ bool pilhaMaior(pilha p1, pilha p2);
 ///Desempilha todos os elementos de uma pilha. Exibe os elementos desempilhados.
 void full_Pop(pilha *p);
 
+///Usa uma pilha para ler números inteiros e uma pilha auxiliar para mostrá-los na ordem que foi digitado.
+void stack_read_int();
+
 #endif // PILHA_H_

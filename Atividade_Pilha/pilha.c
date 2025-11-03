@@ -174,6 +174,39 @@ void full_Pop(pilha *p){
     }
 }
 
+///Usa uma pilha para ler números inteiros e uma pilha auxiliar para mostrá-los na ordem que foi digitado.
+void read_int(){
+
+    pilha p1, p2;
+    int i,num;
+
+    stack_init(&p1);
+    stack_init(&p2);
+
+   for (i = 0; i < STACK_MAX; i++) {
+
+    if (scanf("%d", &num) != 1) {
+        break;
+    }
+
+    push(&p1, num);
+}
+
+    while (!stack_isempty(&p1)) {
+        stack_info temp;
+        pop(&p1, &temp);
+        push(&p2, temp);
+    }
+
+    while (!stack_isempty(&p2)) {
+        stack_info temp;
+        pop(&p2, &temp);
+        printf("%d ", temp);
+    }
+
+
+}
+
 
 
 
