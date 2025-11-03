@@ -73,3 +73,59 @@ int stack_odd(pilha *pares, pilha p){
 
 }
 
+///  Verifica se uma expressão possui parênteses, colchetes e chaves balanceados
+bool delimiter_verify(char expressao[]){
+
+    pilha abertura;
+    int i, tamanho_expressao;
+
+    stack_init(&abertura);
+
+    tamanho_expressao = strlen(expressao);
+
+    for(i=0; i<tamanho_expressao; i++){
+
+        if(expressao[i] == '('||expressao[i] == '{'||expressao[i] == '[')
+            push(&abertura, expressao[i]);
+
+        else if(expressao[i] == ')'||expressao[i] == '}'||expressao[i] == ']'){
+
+            if(stack_isempty(&abertura))
+                return false;
+
+            char delimitador;
+
+            pop(&abertura, &delimitador);
+
+            switch(expressao[i]){
+
+                case')':
+                    if(delimitador != '(')
+                        return false;
+
+                    break;
+
+                case'}':
+                    if(delimitador != '{')
+                        return false;
+
+                    break;
+
+                case']':
+                    if(delimitador != '[')
+                        return false;
+
+                    break;
+
+            }
+
+        }
+
+
+
+    }
+
+    return stack_isempty(&abertura);
+
+}
+
